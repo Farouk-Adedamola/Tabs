@@ -1,13 +1,198 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background: #fb4849; */
+  background: #fff;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.header {
+  text-align: center;
+  margin: 3rem auto;
+  width: 60vw;
+  box-shadow: 0 -2px #011627;
+}
+
+.header-title {
+  margin-bottom: 5px;
+  font-size: 2rem;
+  color: #011627;
+}
+
+.underline {
+  margin-left: auto;
+  margin-right: auto;
+  width: 2rem;
+  height: 0.3rem;
+  background-color: #2f93e6e8;
+  border-radius: 5px;
+  animation: underline 3s linear infinite both;
+}
+
+@keyframes underline {
+  0% {
+    width: 2rem;
+  }
+  25% {
+    width: 4.5rem;
+    /* box-shadow: 1px -2px #f0f0f0; */
+    /* #2f93e6e8 */
+  }
+  50% {
+    width: 7rem;
+    /* box-shadow: 1px 2px #f0f0f0; */
+  }
+  75% {
+    width: 4.5rem;
+  }
+  100% {
+    width: 2rem;
+  }
+}
+
+.main-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.each-btn {
+  margin-left: 4px;
+  border: none;
+  border-radius: 3px;
+  padding: 0.3rem 0.6rem;
+  font-family: "Courier New", Courier, monospace;
+  transition: all 0.8s;
+}
+
+.each-btn:hover {
+  background: #fb4849;
+  cursor: pointer;
+  box-shadow: 0 -2px #011627;
+}
+
+.active-btn {
+  font-family: "Courier New", Courier, monospace;
+  color: #fff;
+  box-shadow: 0 2px #011627;
+  font-size: 1.5rem;
+  letter-spacing: -1px;
+  background: #fb4849;
+}
+
+.container {
+  margin: 4rem 2rem;
+}
+
+.initials-title {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 100;
+}
+
+.company {
+  width: 14vw;
+  text-align: center;
+  background-color: #2f93e6e8;
+  padding: 0.2rem 0.3rem;
+  color: #fff;
+  border-radius: 2px;
+}
+
+.date {
+  font-size: 0.8rem;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.duty {
+  display: grid;
+  grid-template-areas: "a t t t t t t t t t t t";
+}
+
+.icon {
+  grid-area: "a";
+  align-self: center;
+  font-size: small;
+  color: #fb4849;
+}
+
+.paragraph {
+  grid-area: "t";
+  margin-left: 10px;
+  font-size: small;
+}
+
+/* media screen section */
+
+@media screen and (min-width: 900px) {
+  .header {
+    box-shadow: 0 0px;
+  }
+  .overall-container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    max-width: 80vw;
+    margin: 0 auto;
+  }
+  .main-btn {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    margin: 0 auto;
+  }
+  .container {
+    margin: 0rem 2rem;
+  }
+  .initials-title {
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    margin-top: 0;
+  }
+  .main-btn {
+    background-color: #fb4849;
+    border-radius: 4px;
+    padding: 0rem 0.5rem;
+    height: 40vh;
+  }
+  .each-btn {
+    /* line-height: 2rem; */
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  .active-btn {
+    box-shadow: 0 2px #fff;
+    background: #2f93e6e8;
+  }
+  .company {
+    width: 5rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .header-title {
+    /* margin-bottom: 5px; */
+    font-size: 3rem;
+    /* color: #011627; */
+  }
+
+  .date {
+    font-size: 1rem;
+  }
+  .initials-title {
+    font-size: 2rem;
+  }
+  .paragraph {
+    /* grid-area: "t"; */
+    /* margin-left: 10px; */
+    font-size: 1rem;
+  }
 }

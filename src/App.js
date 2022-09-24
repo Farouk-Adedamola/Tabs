@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaAngleDoubleRight } from "react-icons/fa";
+import "./index.css";
 
 const url = "https://course-api.com/react-tabs-project";
 
@@ -32,34 +33,42 @@ const App = () => {
   const { title, duties, company, dates } = data[value];
   return (
     <>
-      <section>
-        <h1>Experience</h1>
+      <section className="header">
+        <h1 className="header-title">Experience</h1>
         <div className="underline"></div>
       </section>
-      <div>
-        <div>
+      <div className="overall-container">
+        <main className="main-btn">
           {data.map((item, index) => {
             return (
               <>
-                <button key={item.id} onClick={() => setValue(index)}>
+                <button
+                  key={item.id}
+                  className={`each-btn ${index === value && "active-btn"}`}
+                  onClick={() => setValue(index)}
+                >
                   {item.company}
                 </button>
               </>
             );
           })}
-        </div>
+        </main>
         <div className="container">
-          <h3 className="header">{title}</h3>
-          <h5>{company}</h5>
-          <p>{dates}</p>
-          {duties.map((duty, index) => {
-            return (
-              <div key={index} className="">
-                <FaAngleDoubleRight />
-                <p>{duty}</p>
-              </div>
-            );
-          })}
+          <div className="initials">
+            <h3 className="initials-title">{title}</h3>
+            <h5 className="company">{company}</h5>
+            <p className="date">{dates}</p>
+          </div>
+          <div className="duties">
+            {duties.map((duty, index) => {
+              return (
+                <div key={index} className="duty">
+                  <FaAngleDoubleRight className="icon" />
+                  <p className="paragraph">{duty}</p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </>
