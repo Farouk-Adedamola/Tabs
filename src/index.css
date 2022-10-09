@@ -5,7 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background: #fb4849; */
   background: #fff;
 }
 
@@ -103,6 +102,7 @@ code {
   padding: 0.2rem 0.3rem;
   color: #fff;
   border-radius: 2px;
+  border: transparent;
 }
 
 .date {
