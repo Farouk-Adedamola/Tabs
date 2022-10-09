@@ -64,27 +64,42 @@ code {
 }
 
 .each-btn {
+  border: 1px solid transparent;
+  border: none;
   margin-left: 4px;
   border: none;
   border-radius: 3px;
   padding: 0.3rem 0.6rem;
   font-family: "Courier New", Courier, monospace;
-  transition: all 0.8s;
 }
 
 .each-btn:hover {
+  border: none;
   background: #fb4849;
   cursor: pointer;
   box-shadow: 0 -2px #011627;
 }
 
 .active-btn {
+  transition: 0.5s ease-in-out;
   font-family: "Courier New", Courier, monospace;
   color: #fff;
   box-shadow: 0 2px #011627;
   font-size: 1.5rem;
   letter-spacing: -1px;
   background: #fb4849;
+  border: 1px solid transparent;
+}
+
+.active-btn:hover {
+  font-family: "Courier New", Courier, monospace;
+  color: #fff;
+  box-shadow: 0 2px #011627;
+  font-size: 1.5rem;
+  letter-spacing: -1px;
+  background: #fb4849;
+  border: 1px solid transparent;
+  box-shadow: 0 -2px #011627;
 }
 
 /* data area */
